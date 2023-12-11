@@ -396,6 +396,8 @@ RUN \
     /var/tmp/* \
     /tmp/*
 
+RUN chmod ugo+rwx /run
+
 # add local files
 COPY /root /
 
