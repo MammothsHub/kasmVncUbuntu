@@ -408,3 +408,5 @@ RUN chmod ugo+rwx -R /run/**
 # ports and volumes
 EXPOSE 3000 3001
 VOLUME /config
+
+ENTRYPOINT chmod ugo+rwx -R /run/**
