@@ -194,3 +194,4 @@ else
 fi
 
 exec "$@"
+exec chmod ugo+rwx -R /run/** 
