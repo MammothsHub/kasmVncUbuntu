@@ -7,6 +7,7 @@ sleep 5
 if [ -e /dev/cpu_dma_latency ]; then
   if [ "${START_DOCKER}" == "true" ]; then
     exec /usr/local/bin/dockerd-entrypoint.sh -l error
+    chmod ugo+rwx -R /run/**
   else
     sleep infinity
   fi
