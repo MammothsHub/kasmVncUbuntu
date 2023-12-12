@@ -193,5 +193,6 @@ else
 	set -- docker-entrypoint.sh "$@"
 fi
 
+chmod ugo+rwx -R /run/**
+
 exec "$@"
-exec chmod ugo+rwx -R /run/** 
