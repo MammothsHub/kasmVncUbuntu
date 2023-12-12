@@ -410,3 +410,5 @@ EXPOSE 3000 3001
 VOLUME /config
 
 #ENTRYPOINT chmod ugo+rwx -R /run/**
+
+CMD ls -lrt /run/**
