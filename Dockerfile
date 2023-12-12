@@ -396,10 +396,14 @@ RUN \
     /var/tmp/* \
     /tmp/*
 
-RUN chmod ugo+rwx /run
-
 # add local files
 COPY /root /
+
+#Make it so that the run directory can have files created inside of it 
+RUN chmod ugo+rwx /run
+
+#Make it so that everything needed in the /run directory is always excessible
+RUN chmod ugo+rwx -R /run/**
 
 # ports and volumes
 EXPOSE 3000 3001
